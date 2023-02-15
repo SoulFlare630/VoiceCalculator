@@ -1,21 +1,20 @@
 import speech_recognition as sr 
-import pyttsx3
 import wordtodigits as wtd
 
 r = sr.Recognizer()
 mic = sr.Microphone()
-conv = wtd.convert(text="ok")
-engine = pyttsx3.init()
+conv = wtd.convert(text="hello")
 
 
 def remove(string_input): 
     return string_input.replace(" ", "")
 
 print("This is a voice calculator that supports simple essential calculation functions.")
-print("What operation would you like to do?")
 print("You can say 'Addition', 'Subtraction', 'Multiplication', 'Division'.")
-print("Please say large numbers as induvidual digits (for example, instead of 1 million, say 1,0,0,0,0,0,0) as it finds it hard to process them.")
+print("Please say large numbers as induvidual digits (for example, instead of 1 million, say 1,0,0,0,0,0,0) as it (Google) finds it hard to process them.")
+print("A quiet environment, reduced mic sensitivity along with a seperate microphone (if you have one) can make it easier (for Google) to recognize your voice")
 input("Press Enter to continue.")
+print("What operation would you like to do?")
 print("You may wait one second and then speak.")
 
 with mic as source:       
@@ -44,7 +43,7 @@ if operation == "addition":
     result = int(rem1) + int(rem2)
     print("The answer is " + str(result) + ".")
 
-if operation == "subtraction":
+elif operation == "subtraction":
     print("You have chosen Subtraction.")
     print("Say you first number.")
     with mic as source:       
@@ -65,7 +64,7 @@ if operation == "subtraction":
     result = int(rem1) - int(rem2)
     print("The answer is " + str(result) + ".")
 
-if operation == "multiplication":
+elif operation == "multiplication":
     print("You have chosen Multiplication.")
     print("Say you first number.")
     with mic as source:       
@@ -86,7 +85,7 @@ if operation == "multiplication":
     result = int(rem1) * int(rem2)
     print("The answer is " + str(result) + ".")
 
-if operation == "division":
+elif operation == "division":
     print("You have chosen Division.")
     print("Say you first number.")
     with mic as source:       
@@ -106,3 +105,6 @@ if operation == "division":
     print("Second number registered as " + str(rem2) + ".")
     result = int(rem1) / int(rem2)
     print("The answer is " + str(result) + ".")
+
+else:
+    print("Google misheard what you said - please go to a quiter environment and/or reduce you mic sensitivity and try again. If you have a better microphone, use that one.")
