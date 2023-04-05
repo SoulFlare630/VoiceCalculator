@@ -24,7 +24,7 @@ operation = r.recognize_google(audio)
 
 if operation == "addition":
     print("You have chosen Addition.")
-    print("Say you first number.")
+    print("Say your first number.")
     with mic as source:       
         r.adjust_for_ambient_noise(source)    
         audio = r.listen(source)    
@@ -45,7 +45,7 @@ if operation == "addition":
 
 elif operation == "subtraction":
     print("You have chosen Subtraction.")
-    print("Say you first number.")
+    print("Say your first number.")
     with mic as source:       
         r.adjust_for_ambient_noise(source)    
         audio = r.listen(source)    
@@ -66,7 +66,7 @@ elif operation == "subtraction":
 
 elif operation == "multiplication":
     print("You have chosen Multiplication.")
-    print("Say you first number.")
+    print("Say your first number.")
     with mic as source:       
         r.adjust_for_ambient_noise(source)    
         audio = r.listen(source)    
@@ -87,7 +87,7 @@ elif operation == "multiplication":
 
 elif operation == "division":
     print("You have chosen Division.")
-    print("Say you first number.")
+    print("Say your first number.")
     with mic as source:       
         r.adjust_for_ambient_noise(source)    
         audio = r.listen(source)    
