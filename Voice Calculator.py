@@ -106,4 +106,4 @@ elif operation == "division":
     print("The answer is " + str(result) + ".")
 
 else:
-    print("Google misheard what you said - please go to a quiter environment and/or reduce you mic sensitivity and try again. If you have a better microphone, use that one (Having noise cacellation is ideal).")
+    print("Google misheard what you said - please go to a quiter environment and/or reduce you mic sensitivity and try again. If you have a better microphone, use that one [Having noise cacellation is ideal].")
