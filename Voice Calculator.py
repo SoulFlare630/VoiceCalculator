@@ -11,8 +11,7 @@ def remove(string_input):
 
 print("This is a voice calculator that supports simple essential calculation functions.")
 print("You can say 'Addition', 'Subtraction', 'Multiplication', 'Division'.")
-print("Please say large numbers as induvidual digits (for example, instead of 1 million, say 1,0,0,0,0,0,0) as it (Google) finds it hard to process them.")
-print("A quiet environment, reduced mic sensitivity along with a seperate microphone (if you have one) can make it easier (for Google) to recognize your voice")
+print("A quiet environment, reduced mic sensitivity along with a seperate microphone (if you have one) and noise cancellation (if available) and can make it easier (for Google) to understand what you are saying.")
 input("Press Enter to continue.")
 print("What operation would you like to do?")
 print("You may wait one second and then speak.")
@@ -107,4 +106,4 @@ elif operation == "division":
     print("The answer is " + str(result) + ".")
 
 else:
-    print("Google misheard what you said - please go to a quiter environment and/or reduce you mic sensitivity and try again. If you have a better microphone, use that one.")
+    print("Google misheard what you said - please go to a quiter environment and/or reduce you mic sensitivity and try again. If you have a better microphone, use that one (Having noise cacellation is ideal).")
